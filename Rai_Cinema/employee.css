@@ -1,0 +1,66 @@
+body{
+    background-image: url(https://i.ibb.co/cFK2V6g/backG.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header{
+    background-image: linear-gradient(rgb(65, 65, 197),black,rgb(65, 65, 197));;
+    margin: 0;
+}
+
+header .title{
+    color: white;
+    display: flex;
+    margin-left: 10px;
+}
+
+header h1{
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.staffTitle{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.flex-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-container h4{
+    font-size: 20px;
+}
+
+.flex-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.cust-container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+    height: 260px;
+    width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    background: white;
+}
+
+.booking-container{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+    height: 260px;
+    width: 400px;
+    border-radius: 15px;
+    background: white;
+}
+
+.cust-container:hover, .booking-container:hover{
+    transform: scale(1.05);
+}

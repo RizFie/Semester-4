@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cinema Booking</title>
+    <link rel="stylesheet" href="newLoginCSS.css">
+    <link rel="stylesheet" href="CinemaCSS.css">
+    <style>
+        .radio-group {
+            display: flex;
+            gap: 30px; /* Adjust the gap as needed */
+            margin-left: 32%;
+        }
+        .radio-group label {
+            display: flex;
+            align-items:center;
+        }
+        form.radio{ align-items: center;}
+</style>
+</head>
+<body id="body">
+    <div class="container">
+        <form >
+            <h1 class="form">Cinema Booking<br></h1>
+            <h3 class="form">Enter your login details<br></h3>
+            <form >
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="role" value="customer">
+                        Customer
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="staff">
+                        Staff
+                    </label>
+                </div>
+            </form><br><br>
+              
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="wrap">
+                <button type="submit" onclick="solve()">Submit</button>
+            </div>
+            <div class="register-link">
+                Not registered? <a href="newSignUp.html">Register</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="staffStyle.css">
+    <style>h2.role {color: #fdfdfd;}</style>
+</head>
+<body>
+    <header>
+        <h1>CINEMA MANAGEMENT SYSTEM</h1>
+        <h2 class="role">ADMIN</h2>
+    </header>
+    
+    <section>
+        <h2>List of Movies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Movies Code</th>
+                    <th>Movies Name</th>
+                    <th>Price</th>
+                    <th>Movie Show Time</th>
+                    <th>Seat Availability</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-mCode-</td>
+                    <td>-mName-</td>
+                    <td>-mPrice-</td>
+                    <td>-mShowTime-</td>
+                    <td>-seatAvailability-</td>
+                    <td>
+                        <a href="AdminEdit.html">Edit</a> |
+                        <a href="Delete.html">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="add-movie">
+                        <a href="addMovies.html">Add Movie</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>List of Customers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Code</th>
+                    <th>Customer Name</th>
+                    <th>Customer's Booking</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-custCode-</td>
+                    <td>-custName-</td>
+                    <td>-custBooking-</td>
+                    <td>
+                        <a href="AdminEditCust.html">Edit</a> |
+                        <a href="DeleteCust.html">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

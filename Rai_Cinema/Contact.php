@@ -1,0 +1,65 @@
+<?php
+    session_start();
+    include("dbconn.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="ContactCSS.css">
+    <link rel="stylesheet" href="CinemaCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<header>
+    <div class="navbar">
+       <div class="logo"><a href="#">Rai Cinemas</a></div>
+       <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+       </div>
+    </div> 
+    <div class="dropdown_menu">
+       <li><a href="main.php">Home</a></li>
+       <li><a href="editCust.php">Edit Account</a></li>
+       <li><a href="custViewMovieInfo.php">Movies</a></li>
+       <li><a href="custViewBooking.php" style="color: black;">View Booking</a></li>
+       <?php
+                        if(isset($_SESSION['username'])){
+                            echo '<li><a href="logout.php" class="action_btn">Logout (' . $_SESSION['username'] . ')</a></li>';
+                        }
+             ?>
+    </div>
+</header>
+<body>
+    <div class="about">
+        <h1>Contact Us</h1>
+        <p>Have questions or need assistance? Reach out to our friendly support team via the contact numbers below or email us directly. We’re here to help!</p>
+        <h3>RAI Cinema Email Support</h3>
+        <p id="email">cinerai@gmail.cs.com</p>
+        <h3>RAI Cinema Customer Relation Hotline</h3>
+        <p id="PhoneNum">+603 6966 6729</p>
+        <h3>Media Social</h3>
+        <span><b>Instagram</b>: @RAIcinema</span><br>
+        <span><b>Facebook</b>: RAIcinema</span>
+        
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.conatins('open')
+
+            toggleBtn.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+<?php mysqli_close($dbconn); ?>
+</html>

@@ -1,0 +1,174 @@
+.head h1 {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.logo {
+    margin-bottom: 25px;
+    margin-top: 15px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.ibb.co/cFK2V6g/backG.png);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.seatAlpha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.seatAlpha h1 {
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+}
+
+.seatAlpha p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.screen {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+td {
+    background-color: #fff;
+    color: #000;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.buttonSubmit, .btn-back {
+    margin: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.btn-back button {
+    background-color: #333;
+}
+
+.btn-back button:hover {
+    background-color: #555;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.seat-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 500px;
+    max-width: 600px;
+}
+
+.seat-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.seat-container table {
+    width: 100%;
+}
+
+.seat-container td {
+    background-color: #f9f9f9;
+}
+
+.seat-container th {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+}
+
+.seat-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+

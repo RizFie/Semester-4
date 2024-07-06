@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: monospace;
+    background-image: url(https://i.ibb.co/cFK2V6g/backG.png);
+    background-size: cover;
+}
+
+.main {
+    width: 500px;
+    height: 520px;
+    background: red;
+    overflow: hidden;
+    background: url(https://i.ibb.co/wNCPnZ6/kino-saal-4.jpg) no-repeat center / cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px black;
+    position: relative;
+}
+
+#chk {
+    display: none;
+}
+
+.signup, .login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.8s ease-in-out;
+}
+
+label {
+    color:  darkcyan;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.signup .text .instructions{
+    font-size: 9px;
+    color: whitesmoke;
+}
+
+.signup .text label{
+    color: wheat;
+    font-size: 1.2em;
+    margin: 7px;
+    font-weight: none;
+}
+
+input {
+    width: 60%;
+    height: 12px;
+    background: white;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background: #893fdd;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkmagenta;
+}
+
+.login {
+    background: url(https://i.ibb.co/MszrDqD/pngtree-the-theatre-has-three-projectors-that-seem-to-be-all-over-image-2572495.jpg) no-repeat center / cover;
+    border-radius: 60% / 10%;
+    transform: translateY(-500px);
+}
+
+.login label {
+    color: darkcyan;
+    transform: scale(0.6);
+}
+
+.login .text label{
+    color: white;
+    font-size: 1.6em;
+    margin: 10px;
+    font-weight: none;
+}
+
+#chk:checked ~ .signup {
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login {
+    transform: translateY(0);
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(0.6);
+}
+
+#chk:checked ~ .login label {
+    transform: scale(1);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Cinema Booking</title>
+    <link rel="stylesheet" href="newLoginCSS.css">
+    <link rel="stylesheet" href="CinemaCSS.css">
+    <style> div.container{
+        align-items: center;
+    }
+    .radio-group {
+            display: flex;
+            gap: 30px; /* Adjust the gap as needed */
+            margin-left: 32%;
+        }
+        .radio-group label {
+            display: flex;
+            align-items:center;
+        }
+        form.radio{ align-items: center;}
+    </style>
+</head>
+<body class="form">
+    <div class="container">
+            <h1 class="form"> Cinema Booking</h1>
+            <h3 class="form"> Enter your Registration details</h3>
+            <form >
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="role" value="customer">
+                        Customer
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="staff">
+                        Staff
+                    </label>
+                </div><br>
+            </form>
+            <label for = "firstName"> First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for = "lastName"> Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for = "email"> Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password"> Password:</label>
+            <input type="password" id="password"name="password" required>  
+            <div class="wrap">
+                <button type="submit" onclick="solve()">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Upload Movie Poster</title>
+    <style>
+    </style>
+    <link rel="stylesheet" href="CinemaCSS.css">
+    
+</head>
+<body class="form">
+    <nav id="NavBar">
+        <a class="home" href="main.html">Home</a>
+        <a class="contact" href="Contact.html">Contact</a>
+        <a class="about" href="#about">About</a>
+        <a class="signin" href="login.html">Login</a>
+        <a class="signup" href="signup.html">Sign Up</a>
+    </nav>
+    <div class="container">
+        
+        <h1 class="form">Upload Movie Poster and Details</h1>
+        <form action="admin_upload.php" method="post" enctype="multipart/form-data">
+            <label for="movieTitle">Movie Title:</label>
+            <input type="text" id="movieTitle" name="movieTitle" required>
+            
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="poster">Upload Movie Poster :</label>
+            <input type="text" id="poster" name="poster" required>
+            
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(53, 53, 53);
+}
+
+.about{
+    color: white;
+    font-family: sans-serif;
+    
+}
+
+#email, #PhoneNum{
+    color: aqua;
+}
+
+

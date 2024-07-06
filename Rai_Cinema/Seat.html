@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="seatCSS.css">
+</head>
+<body>
+    <div class="center">
+        <div class="tickets">
+            <div class="ticket-selector">
+                <div class="head">
+                    <div class="MovieName" id="movieName" >Movie Name</div>
+                </div>
+                <div class="seats">
+                    <div class="status">
+                        <div class="item">Available</div>
+                        <div class="item">Booked</div>
+                        <div class="item">Selected</div>
+                    </div>
+                    <form>
+                        <div class="all-seat">
+                        </div>
+                    </div>
+                    <div class="timings">
+                        <div class="dates">
+                            <form method="get" action="">
+                                <input type="radio" id="d1" name="date" checked>
+                                <label for="d1" class="dates-choose">
+                                    <div class="day">SUN</div>
+                                    <div class="date">11</div>
+                                </label>
+                                <input type="radio" id="d2" name="date">
+                                <label for="d2" class="dates-choose">
+                                    <div class="day">MON</div>
+                                    <div class="date">12</div>
+                                </label>
+                            </form>
+                            
+                    </div>
+                    <div class="times">
+                        <form method="get" action="">
+                            <input type="radio" id="t1" name="time" checked>
+                            <label for="t1" class="time">1 pm</label>
+                            <input type="radio" id="t2" name="time">
+                            <label for="t2" class="time">3 pm</label>
+                        </form>
+                    </div>
+                    </form>
+                <div class="price">
+                    <div class="totals">
+                        <span> 
+                            <span class="count">0</span> 
+                            Tickets 
+                        </span>
+                        <div class="amount">0</div>
+                    </div>
+                    <button formmethod="post" type="submit">Book</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <script src="seatJS.js"></script>
+</body>
+</html>

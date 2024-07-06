@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let counter = 1;
+        setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if( counter > 5)
+        {
+        counter = 1;
+        }
+        }, 4000);
+
+        function setMovieName(movieName) {
+        localStorage.setItem('movieName', movieName);
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema System</title>
+    <link rel="stylesheet" href="CinemaCSS.css">
+    <link rel="stylesheet" href="promoCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Rai Cinemas</a></div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+         </div> 
+         <div class="dropdown_menu">
+            <li><a href="editCust.php" style="color: black;">Edit Account</a></li>
+            <li><a href="Contact.html" style="color: black;">About</a></li>
+            <li><a href="Movie.html" style="color: black;">Movies</a></li>
+            <li><a href="#" class="action_btn">Logout</a></li>
+         </div>
+</header>
+<body>
+    <div class="slider">
+        <div class="slides">
+         <!--radio starts-->
+         <input type="radio" name="radio-btn" id="radio1">
+         <input type="radio" name="radio-btn" id="radio2">
+         <input type="radio" name="radio-btn" id="radio3">
+         <input type="radio" name="radio-btn" id="radio4">
+         <input type="radio" name="radio-btn" id="radio5">
+        <!--radio button ends-->
+
+        <div class="slide first">
+            <img src="https://i.ibb.co/TWk1QWD/panda.png" alt="panda">
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/jfWksyD/apes.webp" alt="apes">
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/BnyvZ4T/If.jpg" alt="if">
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/5nH36nS/Garfield.jpg" alt="Garfield">
+        </div>
+        <div class="slide">
+            <img src="https://i.ibb.co/hZVGYCF/sheriff.png" alt="sheriff">
+        </div>
+        <div class="button">
+            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+            <a onclick="nextimg(1)" class="prev">&#10095;</a>
+        </div>
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+        </div>
+        <!--slides end-->
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+        </div>
+    </div>
+    <section class="movies" id="movies">
+        <h1 class="trending">Trending</h1>
+        <div class="movies-container">
+            
+            <div class="box">
+                <div class="box-img">
+                    <form method="POST" action="seat.html">
+                        <input type="image" src="https://i.ibb.co/jTDF1mn/Garfield.jpg" alt="Garfield" onclick="setMovieName('The Garfield Movie')">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="box-img">
+                    <form method="POST" action="seat.html">
+                        <input type="image" src="https://i.ibb.co/3pH7Vmd/kfp4.jpg" alt="panda4" onclick="setMovieName('Kung Fu Panda 4')">
+                    </form>
+                </div>
+            </div>
+           
+            <div class="box">
+                <div class="box-img">
+                    <form method="POST" action="seat.html">
+                        <input type="image" src="https://i.ibb.co/fkbRV73/if.jpg" alt="if" onclick="setMovieName('If')">
+                    </form>
+                </div>
+            </div>
+           
+            <div class="box">
+                <div class="box-img">
+                    <form method="POST" action="seat.html">
+                        <input type="image" src="https://i.ibb.co/kySGDG6/Sheriff.jpg" alt="Sheriff" onclick="setMovieName('Sheriff: Narko Integriti')">
+                    </form>
+                </div>
+            </div>
+          
+            <div class="box">
+                <div class="box-img">
+                    <form method="POST" action="seat.html">
+                        <input type="image" src="https://i.ibb.co/vxkSYNN/KOTPA.jpg" alt="KOTPA" onclick="setMovieName('Kingdom of The Planet of The Apes')">
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.conatins('open')
+
+            toggleBtn.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

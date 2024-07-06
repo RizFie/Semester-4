@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Rai Cinemas</a></div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+         </div> 
+         <div class="dropdown_menu">
+            <?php echo"<li><a href='EditCust.php?a_no=".$username."' >Edit Account</a></li>"; ?>
+            <li><a href="Contact.php" style="color: black;">About</a></li>
+            <li><a href="#movies" style="color: black;">Movies</a></li>
+            <li><a href="custViewBooking.php" style="color: black;">View Booking</a></li>
+            <?php
+                        if(isset($_SESSION['username'])){
+                            echo '<li><a href="logout.php" class="action_btn">Logout (' . $_SESSION['username'] . ')</a></li>';
+                        }
+             ?>
+         </div>        
+</header>
+$sql = "SELECT * FROM movie";
+            $query = mysqli_query($dbconn, $sql) or die ("Error: " . mysqli_error($dbconn));
+            $row_count = mysqli_num_rows($query);
+            
+            if($row_count == 0) {
+                echo "<p>No records found.</p>";
+            } else {
+                echo "<table border='1'>";
+                echo "<tr>";
+                echo "<th>Movie ID</th>";
+                echo "<th>Movie Name</th>";
+                echo "<th>Movie Genre</th>";
+                echo "<th>Movie Age</th>";
+                echo "<th>Movie Image</th>";
+                echo "<th>Movie Description</th>";
+                echo "<th>License Fee</th>";
+                echo "<th>Rating</th>";
+                echo "<th>Language</th>";
+                echo "<th>Actions</th>";
+                echo "</tr>";
+                
+                while($row = mysqli_fetch_array($query)) {
+                    echo "<tr>";
+                    echo "<td>".$row["idmovie"]."</td>";
+                    echo "<td>".$row["movie_name"]."</td>";
+                    echo "<td>".$row["movie_genre"]."</td>";
+                    echo "<td>".$row["movie_age"]."</td>";
+                    echo "<td><img src='".$row["movie_image"]."' alt='Movie Image' class='movie-img' /></td>";
+                    echo "<td>".$row["movie_desc"]."</td>";
+                    echo "<td>".$row["movie_licenseFee"]."</td>";
+                    echo "<td>".$row["movie_rating"]."</td>";
+                    echo "<td>".$row["movie_language"]."</td>";
+                    echo "<td>
+                            <a class='alter'  href='EditMovie.php?a_no=".$row["idmovie"]."'>Edit</a> |
+                            <a class='alter' href='admin.php?action=delete&a_no=".$row["idmovie"]."' onclick='return confirmDelete()'>Delete</a>
+                          </td>";
+                    echo "</tr>";
+                }
+                
+                echo "</table>";
+            }
+        ?>    
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn');
+            const toggleBtnIcon = document.querySelector('.toggle_btn i');
+            const dropDownMenu = document.querySelector('.dropdown_menu');
+    
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.conatins('open')
+    
+                toggleBtn.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
+</body>
+<?php
+    mysqli_close($dbconn);
+?>
+</html>
