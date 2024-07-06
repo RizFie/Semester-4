@@ -1,0 +1,36 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.order-stat{
+ background: beige; 
+ text-align: center;
+}
+
+li{
+    display: list-item;
+    float: left;
+    margin: 0px 20px 0px 20px;
+}
+
+.status{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h3{
+    margin-top: 30px;
+}
+
+.update-stat h2{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container table{
+    margin: auto;
+}

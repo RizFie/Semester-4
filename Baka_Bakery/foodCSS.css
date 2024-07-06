@@ -1,0 +1,86 @@
+*{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 25px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 10px 10px 7px rgb(36, 36, 36);
+
+}
+
+table td{
+    padding: 10px;
+}
+
+table th{
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    text-align: center;
+    background: pink;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0px 10px 7px rgb(255, 149, 167);
+}
+
+body{
+    background: white;
+}
+
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addfud{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.addfud button{
+    margin-top: 25px;
+    border: 1px solid black;
+    text-align: center;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.addfud button:hover, .back button:hover{
+    cursor: pointer;
+}
+
+.back{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.back button{
+    margin-top: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 170px;
+    padding: 10px;
+    border-radius: 15px;
+}

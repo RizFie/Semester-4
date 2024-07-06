@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff0f6;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d63384;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 30px 0 15px;
+    text-align: center;
+    color: #d63384;
+    font-weight: 600;
+    background-color: #ffd6e7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.food, .order, .sales, .details {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto 20px;
+    background-color: white;
+    border: 2px solid #d63384;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ffd6e7;
+}
+
+table th {
+    background-color: #ffd6e7;
+    color: #d63384;
+}
+
+.btnLogOut {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    background-color: #d63384;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btnLogOut:hover {
+    background-color: #c12270;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c12270;
+}
+
+input {
+    border: 1px solid #d63384;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+}
+
+.food-container, .details-container, .emp-container, .calc-container, .ViewOrder, .assign-container {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 90%;
+    margin: 20px auto;
+    border: 2px solid #d63384;
+}
+
+.details-container table, .emp-container table, .calc-container table, .ViewOrder table, .assign-container table {
+    margin: 0 auto;
+}
+
+.details-container, .emp-container, .calc-container, .ViewOrder, .assign-container {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .details-container, .emp-container, .calc-container, .ViewOrder, .assign-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .details-container, .emp-container, .calc-container, .ViewOrder, .assign-container {
+        width: 70%;
+    }
+}

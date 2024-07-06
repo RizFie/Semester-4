@@ -1,0 +1,257 @@
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap');
+ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-image: url('pics/pinkhead.jpg');
+            background-size: cover;
+            background-color: #e9bcf1;
+            background-position: center;
+            color: rgb(2, 2, 2);
+            padding: 22px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: rgb(2, 2, 2);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        footer {
+            background-image: url('pics/pinkfoot.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #e9bcf1;
+            color: rgb(2, 2, 2);
+            padding: 40px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+            display: flex;
+        }
+        .product-wrapper {
+            width: 1181px; /* Adjust based on your specific layout */
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+        .product-grid {
+            display: flex;
+            gap: 15px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            background: #ddd;
+            background-color: #ffffff;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-family: "Josefin Sans";
+        }
+
+        .category-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .category {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            width: calc(25% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.3s;
+            background: #ddd;
+            background-color: #ffffff;
+        }
+        .category img {
+            max-width: 100%;
+            height: auto;
+        }
+        .category h3 {
+            margin: 10px 0;
+            font-family: "Josefin Sans";
+        }
+
+        .category a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .product:hover , .category:hover {
+            transform: scale(1.05);
+        }
+
+        .ice-cream{
+            margin-top: 40px;
+        }
+
+        .ice-cream h2, .cake h2, .cookie h2{
+            text-align: center;
+        }
+
+        .iceCream-container, .cake-container, .cookie-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-evenly;
+            margin-bottom: 10vh;
+        }
+
+        /*.ice-cream h2, .cake h2, .cookie h2{
+            border-bottom: black solid 2px;
+            border-top: black solid 2px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            min-width: 100px;
+        }*/
+
+        body{
+            background: white;
+        }
+
+        .footer-container p a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .product:link, .product:visited, .product:hover, .product:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .producti:link, .producti:visited, .producti:hover, .producti:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .productc:link, .productc:visited, .productc:hover, .productc:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .productk:link, .productk:visited, .productk:hover, .productk:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('fonts/cartoon.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .customfont {
+            font-family: 'CustomFont', sans-serif;
+        }
+        
+        @font-face {
+            font-family: 'CustFont';
+            src: url('fonts/3d.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .custfont {
+            font-family: 'CustFont', sans-serif;
+            padding-left: 10px;
+        }
+
+        @font-face {
+            font-family: 'mainsec';
+            src: url('fonts/3d2.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .mainsec {
+            font-family: 'CustFont', sans-serif;
+            padding-left: 15px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 75px; /* Adjust size as needed */
+            margin-right: 10px;
+            margin-left: 25px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #000;
+        }
+
+        #ice-cream {
+            margin-top: 50px;
+        }
+
+        #cake {
+            margin-top: 50px;
+        }
+
+        #cookie {
+            margin-top: 50px;
+        }
+
+        .scroll-link {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .scroll-link:hover {
+            background-color: #ffffff;
+        }
+
+
+
+        
